@@ -11,35 +11,22 @@
     </properties>
     <repositories>
         <repository>
-            <id>nukkitx-repo</id>
-            <url>http://repo.nukkitx.com/main/</url>
-        </repository>
-        <repository>
-            <id>sonatype-nexus-snapshots</id>
-            <url>https://oss.sonatype.org/content/repositories/snapshots</url>
-            <snapshots>
-                <enabled>true</enabled>
-            </snapshots>
+            <id>sonatype</id>
+            <url>https://oss.sonatype.org/content/groups/public/</url>
         </repository>
     </repositories>
 
     <dependencies>
 		<dependency>
-			<groupId>cn.nukkit</groupId>
-			<artifactId>nukkit</artifactId>
-			<version>1.0-SNAPSHOT</version>
-			<scope>provided</scope>
-		</dependency>
-        <dependency>
-            <groupId>net.novatech</groupId>
-            <artifactId>library</artifactId>
-            <version>1.0</version>
-        </dependency>
-		<dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
             <version>1.18.20</version>
             <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>cn.powernukkitx</groupId>
+            <artifactId>powernukkitx</artifactId>
+            <version>1.20.30-r1</version>
         </dependency>
     </dependencies>
     

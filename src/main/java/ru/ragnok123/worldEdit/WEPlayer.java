@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import cn.nukkit.Player;
 import lombok.Getter;
 import ru.ragnok123.worldEdit.utils.BlocksArray;
+import ru.ragnok123.worldEdit.utils.DrawingArray;
 import ru.ragnok123.worldEdit.utils.Selection;
 
 public class WEPlayer {
@@ -21,6 +22,8 @@ public class WEPlayer {
     @Getter
     public ArrayList<BlocksArray> undoSteps = new ArrayList<BlocksArray>();
 
+    public DrawingArray drawing = new DrawingArray();
+
     public WEPlayer(Player p) {
         this.player = p;
         this.selection = new Selection();
@@ -32,5 +35,9 @@ public class WEPlayer {
     
     public boolean hasSelection() {
     	return getSelection().getPosOne() != null && getSelection().getPosTwo() != null;
+    }
+
+    public boolean drawingMode(){
+        return drawing.drawing.containsKey(player);
     }
 }

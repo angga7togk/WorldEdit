@@ -1,8 +1,6 @@
 package ru.ragnok123.worldEdit.commands;
 
 import cn.nukkit.Player;
-import cn.nukkit.command.Command;
-import cn.nukkit.command.CommandSender;
 import cn.nukkit.utils.TextFormat;
 import ru.ragnok123.worldEdit.WEPlayer;
 import ru.ragnok123.worldEdit.WorldEdit;
