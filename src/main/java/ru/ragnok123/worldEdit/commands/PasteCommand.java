@@ -29,7 +29,6 @@ public class PasteCommand extends WECommand {
 			@Override
 			public void onRun() {
 				p.sendMessage(WorldEdit.getPrefix() + TextFormat.AQUA + String.valueOf(WorldUtils.paste(dat, p, copy)) + TextFormat.GREEN + " block(s) have been pasted.");
-				dat.copiedBlocks = null;
 			}
 			
 		});

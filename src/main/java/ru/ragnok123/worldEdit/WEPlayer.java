@@ -1,11 +1,12 @@
 package ru.ragnok123.worldEdit;
 
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
 import cn.nukkit.Player;
 import lombok.Getter;
 import ru.ragnok123.worldEdit.utils.BlocksArray;
-import ru.ragnok123.worldEdit.utils.DrawingArray;
 import ru.ragnok123.worldEdit.utils.Selection;
 
 public class WEPlayer {
@@ -22,7 +23,7 @@ public class WEPlayer {
     @Getter
     public ArrayList<BlocksArray> undoSteps = new ArrayList<BlocksArray>();
 
-    public DrawingArray drawing = new DrawingArray();
+    public static Map<String, Map<String, String>> drawing = new HashMap<>();
 
     public WEPlayer(Player p) {
         this.player = p;
@@ -38,6 +39,6 @@ public class WEPlayer {
     }
 
     public boolean drawingMode(){
-        return drawing.drawing.containsKey(player);
+        return drawing.containsKey(player.getName());
     }
 }

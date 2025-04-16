@@ -1,25 +1,12 @@
 package ru.ragnok123.worldEdit;
 
 import cn.nukkit.Player;
-import cn.nukkit.block.Block;
-import cn.nukkit.block.BlockAir;
-import cn.nukkit.command.Command;
-import cn.nukkit.command.CommandSender;
-import cn.nukkit.event.EventHandler;
 import cn.nukkit.event.Listener;
-import cn.nukkit.event.block.BlockBreakEvent;
-import cn.nukkit.event.player.PlayerInteractEvent;
-import cn.nukkit.event.player.PlayerInteractEvent.Action;
-import cn.nukkit.item.Item;
-import cn.nukkit.item.ItemAxeWood;
-import cn.nukkit.plugin.LibraryLoader;
 import cn.nukkit.plugin.PluginBase;
 import cn.nukkit.utils.TextFormat;
 import lombok.Getter;
 import ru.ragnok123.worldEdit.commands.*;
 import ru.ragnok123.worldEdit.commands.geometry.*;
-import ru.ragnok123.worldEdit.utils.Utils;
-import ru.ragnok123.worldEdit.utils.WorldUtils;
 
 import java.util.HashMap;
 
@@ -55,8 +42,9 @@ public class WorldEdit extends PluginBase implements Listener {
 		getServer().getCommandMap().register("//desel", new DeselCommand());
 		getServer().getCommandMap().register("//replace", new ReplaceCommand());
 		getServer().getCommandMap().register("//rotate", new RotateCommand());
-		getServer().getCommandMap().register("//compress", new CompressCommand());
-		getServer().getCommandMap().register("//decompress", new DecompressCommand());
+		getServer().getCommandMap().register("//draw", new DrawCommand());
+		// getServer().getCommandMap().register("//compress", new CompressCommand());
+		// getServer().getCommandMap().register("//decompress", new DecompressCommand());
 
 		getServer().getCommandMap().register("//cyl", new CylCommand());
 		getServer().getCommandMap().register("//hcyl", new HCylCommand());
