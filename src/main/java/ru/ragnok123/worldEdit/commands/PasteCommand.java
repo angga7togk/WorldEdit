@@ -14,7 +14,7 @@ public class PasteCommand extends WECommand {
 	public PasteCommand() {
 		super("/paste", "Paste area");
 	}
-
+	
 	@Override
 	public void execute(Player p, WEPlayer dat, String[] args) {
 		checkForErrors(p, dat);
